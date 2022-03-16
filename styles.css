@@ -1,0 +1,323 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+  --fontSize: 17px;
+  --normal: 400;
+  --bold: 600;
+  --font1: "Open Sans", sans-serif;
+  --font2: "Poppins", sans-serif;
+  --heading: 30px;
+  --borderRadius: 25px;
+}
+
+html,
+body {
+  display: grid;
+  place-items: center;
+  font-family: var(--font2);
+  color: white;
+  background: url("./images/bg-mobile.svg") no-repeat top center var(--violet);
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 24px;
+  font-size: var(--fontSize);
+  font-weight: var(--normal);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 140px;
+}
+
+.logo img {
+  width: 215px;
+  height: 45px;
+}
+
+.bg-image {
+  display: flex;
+  justify-content: center;
+}
+
+.bg-image img {
+  height: 250px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 140px;
+}
+
+.content h1 {
+  font-size: 30px;
+  font-weight: var(--bold);
+  line-height: 40px;
+  width: 90%;
+}
+
+.content p {
+  width: 90%;
+  margin-top: 35px;
+  line-height: 30px;
+}
+
+.content button {
+  margin-top: 55px;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--borderRadius);
+  border: 1px solid white;
+  width: 60%;
+  height: 50px;
+  color: var(--violet);
+  font-size: var(--fontSize);
+  transition: ease 0.5ms;
+}
+
+.content button:hover {
+  color: white;
+  background-color: var(--softMagenta);
+  border: 1px solid var(--softMagenta);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 20px 20px;
+}
+
+footer .icon {
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
+  transition: ease 0.5ms;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+footer .icon:hover {
+  border: 1px solid var(--softMagenta);
+  color: var(--softMagenta);
+}
+
+@media only screen and (min-width: 768px) {
+  html,
+  body {
+    background: url("./images/bg-desktop.svg") no-repeat left center
+      var(--violet);
+    background-size: cover;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .logo {
+    margin-top: 75px;
+  }
+
+  .sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bg-image img {
+    height: 710px;
+    width: 1050px;
+  }
+
+  .content {
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    margin-top: 70px;
+    width: auto;
+  }
+
+  .content h1 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+
+  .content p {
+    width: 78%;
+    margin-left: -50px;
+  }
+
+  .content button {
+    font-size: 18px;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    margin-left: -360px;
+    transition: ease 0.5ms;
+  }
+
+  footer {
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 210px 0 0 90px;
+  }
+
+  footer .icon {
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+  }
+}
